@@ -6,6 +6,6 @@ export function drawBarChart(values) {
     return ``
 }
 
-function drawBar(value) {
-    return ``;
+export function drawBar(index) {
+    return `<div class="bar bar-${index}"></div>`;
 }

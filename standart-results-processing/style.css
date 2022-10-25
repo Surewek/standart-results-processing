@@ -1,0 +1,93 @@
+:root {
+    --columns: 9;
+    --rows: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.header-title {
+    margin: 0;
+}
+
+.bar-chart-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.scale-y-container {
+    display: flex;
+}
+
+.scale-y-values {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.scale-x-values {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    padding-left: 25px;
+}
+
+.scale-y-value {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.bar-chart {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+    column-gap: 5px;
+    width: 500px;
+    height: 300px;
+    border: 5px solid #525252;
+    padding: 0px 15px;
+
+    background-image: url('./assets/icons/line-horzontal.svg'), url('./assets/icons/line-vertical.svg'); 
+    background-repeat: repeat, repeat;
+    background-size: 1px 25%, 33.33% 1px;
+
+    background-position: 0px 0px, 0px 0px;
+
+
+}
+
+.bar {
+    /* grid-row-start: 0; */
+    grid-row-end: -1;
+    background-color: black;
+    border-radius: 5px 5px 0 0;
+}
+
+/* .bar.bar-1 {
+    grid-row-start: -5;
+    grid-row-end: -1;
+    background-color: brown;
+}
+
+.bar.bar-2 {
+    grid-row-start: -6;
+    grid-row-end: -1;
+    background-color: darkcyan;
+} */
