@@ -27,8 +27,7 @@ intervalsPerCoordsCount.forEach((elem, index) => {
     const currentBar = document.querySelector(`.bar-${index + 1}`);
     currentBar.style.gridRowStart = -elem - 1;
     currentBar.style.background = (index % 2 === 0) ? 'darkcyan' : 'brown';
-})
-
+});
 
 console.log('volt: ', maxPerCoords, barsCount);
 
