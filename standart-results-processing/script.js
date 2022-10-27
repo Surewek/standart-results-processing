@@ -29,8 +29,6 @@ intervalsPerCoordsCount.forEach((elem, index) => {
     currentBar.style.background = (index % 2 === 0) ? 'darkcyan' : 'brown';
 });
 
-console.log('volt: ', maxPerCoords, barsCount);
-
 console.log('max: ', maxValue);
 console.log('min: ', minValue);
 console.log('range: ', range);
@@ -44,8 +42,26 @@ console.log('interval width', intervalsWidth);
 console.log('intervals coords', intervalsCoords);
 console.log('intervalsPerCoordsCount', intervalsPerCoordsCount);
 
+const tableRawValues = [maxValue,
+    minValue,
+    average,
+    range,
+    intervals,
+    standardDeviationSeriesOfObservations,
+    standardDeviationMeasurementResult,
+]
 
+console.log(tableRawValues);
 
+const tableData = document.querySelectorAll('.table-cell-data');
+
+voltages.forEach((elem, index) => tableData[index].innerHTML = elem);
+
+const tableValues = document.querySelectorAll('.table-cell-value');
+
+for(let i = 0; i < tableRawValues.length; i++){
+    tableValues[i].innerHTML = tableRawValues[i];
+}
 
 
 
